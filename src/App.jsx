@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { BookOpen, Search, Plus, Pencil, Trash2, LibraryBig, Layers3, Users, BookMarked, X, RefreshCw } from 'lucide-react'
 
-const API = 'http://localhost:8080/api/books'
+const API = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'}/api/books`
 const blank = { title: '', author: '', isbn: '', category: 'General', quantity: 1 }
 
 export default function App() {
